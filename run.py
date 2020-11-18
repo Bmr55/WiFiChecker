@@ -1,19 +1,8 @@
 import time
-import RPi.GPIO as GPIO
+from led import setup_gpio, turn_on, turn_off
 from check import wifi_connected
 
 LED_PIN = 17
-
-def setup_gpio(pin, warnings):
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setwarnings(warnings)
-    GPIO.setup(pin, GPIO.OUT)
-
-def turn_on(pin):
-    GPIO.output(pin, GPIO.HIGH)
-
-def turn_off(pin):
-    GPIO.output(pin, GPIO.LOW)
 
 def main():
     setup_gpio(LED_PIN, False)
