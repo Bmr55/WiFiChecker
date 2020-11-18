@@ -9,5 +9,5 @@ def led_test():
     time.sleep(2)
     turn_off(LED_PIN)
     
- if __name__ == "__main__":
+if __name__ == "__main__":
     led_test()
